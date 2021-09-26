@@ -1,0 +1,23 @@
+{
+  "name": "TodoApp",
+  "version": "1.0.0",
+  "description": "A simple todo app using node and react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/syedfarooq789/TodoApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedfarooq789/TodoApp/issues"
+  },
+  "homepage": "https://github.com/syedfarooq789/TodoApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
