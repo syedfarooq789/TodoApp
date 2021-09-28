@@ -1,0 +1,27 @@
+[
+    {
+        "id": "ae18c5a6-1ed4-11ec-9621-0242ac130002",
+        "text": "Setup sprint backlog meeting",
+        "status": "Done"
+    },
+    {
+        "id": "b4e73c0a-1ed4-11ec-9621-0242ac130002",
+        "text": "Setup sprint planing meeting",
+        "status": "Done"
+    },
+    {
+        "id": "c183908a-1ed4-11ec-9621-0242ac130002",
+        "text": "Assign jira tickets",
+        "status": "Pending"
+    },
+    {
+        "id": "c68a7350-1ed4-11ec-9621-0242ac130002",
+        "text": "Setup jira subtask meeting",
+        "status": "Pending"
+    },
+    {
+        "id": "cb63cda4-1ed4-11ec-9621-0242ac130002",
+        "text": "Setup sprint retrospective",
+        "status": "Done"
+    }
+]
