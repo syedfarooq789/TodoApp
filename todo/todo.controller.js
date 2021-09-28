@@ -3,7 +3,7 @@ var JsonFileOp = require('./JsonFileOp');
 exports.getTodos = async function (req, res) {
     try {
         const todos = await JsonFileOp.readJsonFile();
-        let todoList = JSON.parse(todos);
+        const todoList = JSON.parse(todos);
         res.send(todoList);
     } catch (e) {
         console.log("get todos error", e);
