@@ -4,7 +4,9 @@
   "description": "A simple todo app using node and react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend-start": "node server.js",
+    "backend-dev": "nodemon server.js",
+    "start-project": "concurrently \"node server.js\" \"npm run build-client\""
   },
   "repository": {
     "type": "git",
