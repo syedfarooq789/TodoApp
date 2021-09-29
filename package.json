@@ -6,7 +6,7 @@
   "scripts": {
     "backend-start": "node server.js",
     "backend-dev": "nodemon server.js",
-    "backend-tests": "jest",
+    "test": "jest",
     "start-project": "concurrently \"node server.js\" \"npm run build-client\""
   },
   "jest": {
