@@ -6,7 +6,15 @@
   "scripts": {
     "backend-start": "node server.js",
     "backend-dev": "nodemon server.js",
+    "backend-tests": "jest",
     "start-project": "concurrently \"node server.js\" \"npm run build-client\""
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "verbose": true
   },
   "repository": {
     "type": "git",
@@ -20,6 +28,8 @@
   },
   "homepage": "https://github.com/syedfarooq789/TodoApp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^27.2.4",
+    "supertest": "^6.1.6"
   }
 }
