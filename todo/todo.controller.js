@@ -1,8 +1,8 @@
-var JsonFileOp = require('./JsonFileOp');
+const { readJsonFile } = require("./JsonFileOp");
 
 exports.getTodos = async function (req, res) {
     try {
-        const todos = await JsonFileOp.readJsonFile();
+        const todos = await readJsonFile();
         const todoList = JSON.parse(todos);
         res.send(todoList);
     } catch (e) {

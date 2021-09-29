@@ -1,7 +1,7 @@
 const express = require("express");
-var app = express();
+const app = express();
 const port = process.env.PORT || 5000;
-var todoRouter = require("./todo/todo.routes");
+const todoRouter = require("./todo/todo.routes");
 app.use(express.raw({ type: "application/json" }));
 
 
