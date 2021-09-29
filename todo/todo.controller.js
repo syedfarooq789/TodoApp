@@ -1,4 +1,4 @@
-const { readJsonFile } = require("./JsonFileOp");
+const { readJsonFile, updateJsonFile } = require("./JsonFileOp");
 
 exports.getTodos = async function (req, res) {
     try {
@@ -15,7 +15,7 @@ exports.updateTodo = async function (req, res) {
     try {
         const todoId = req.params.todoId;
         const status = JSON.parse(req.body).status;
-        const item = await JsonFileOp.updateJsonFile(todoId, status);
+        const item = await updateJsonFile(todoId, status);
         res.send(item);
     } catch (e) {
         console.log("update to todos error", e);
