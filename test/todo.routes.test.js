@@ -25,7 +25,7 @@ describe('Test for todo route', () => {
     it('Update todos', async () => {
         updateJsonFile.mockImplementation(() => mockedTodoJson);
         const res = await request(app)
-            .put('/todo/' + mockedTodoJson.id).send(mockedTodoJson)
+            .put('/todo/' + mockedTodoJson.id).send(mockedTodoJson);
         expect(res.statusCode).toEqual(200);
         expect(updateJsonFile).toHaveBeenCalledTimes(1);
     });
