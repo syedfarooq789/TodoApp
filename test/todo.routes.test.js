@@ -22,7 +22,7 @@ describe('Test for todo route', () => {
     });
 
 
-    it('Post todos', async () => {
+    it('Update todos', async () => {
         updateJsonFile.mockImplementation(() => mockedTodoJson);
         const res = await request(app)
             .put('/todo/' + mockedTodoJson.id).send(mockedTodoJson)
