@@ -5,15 +5,16 @@ const path = require("path");
 module.exports = {
   updateJsonFile: async function (todoId, status) {
     try {
-      const todos = await this.readJsonFile();
+      const todos = await module.exports.readJsonFile();
       const todoObj = JSON.parse(todos);
       const todoItem = todoObj.filter(item => item.id == todoId);
       todoItem[0].status = status;
       let todoJson = JSON.stringify(todoObj);
-      this.writeToJsonFile(todoJson);
+      module.exports.writeToJsonFile(todoJson);
       return todoItem[0];
     } catch (e) {
       console.log("error update to json file", e);
+      throw e
     }
   },
   readJsonFile: async function () {
