@@ -15,7 +15,7 @@ const Todos = ({ openSnackBar, handleClose }: snackBarProps) => {
                 aria-label="close"
                 color="inherit"
             ></IconButton>
-            <CloseIcon fontSize="small" onClick={handleClose} />
+            <CloseIcon fontSize="small" data-testid="snackbar-close" onClick={handleClose} />
         </Fragment>
     );
 
@@ -28,6 +28,7 @@ const Todos = ({ openSnackBar, handleClose }: snackBarProps) => {
             onClose={handleClose}
             message="Error from the server"
             action={action}
+            data-testid="snackbar"
         />
     )
 }
