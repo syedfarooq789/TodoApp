@@ -14,8 +14,7 @@ exports.getTodos = async function (req, res) {
 exports.updateTodo = async function (req, res) {
     try {
         const todoId = req.params.todoId;
-        const status = JSON.parse(req.body).status;
-        const item = await updateJsonFile(todoId, status);
+        const item = await updateJsonFile(todoId, req.body.status);
         res.send(item);
     } catch (e) {
         console.log("update to todos error", e);
