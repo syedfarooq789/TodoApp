@@ -14,6 +14,7 @@ module.exports = {
       return todoItem[0];
     } catch (e) {
       console.log("error update to json file", e);
+      throw e
     }
   },
   readJsonFile: async function () {

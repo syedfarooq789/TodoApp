@@ -13,5 +13,8 @@ app.use("/todo", todoRouter);
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
+app.use((err, req, res, next) => {
+    res.status(err.status || 500).send({ error: err.message });
+});
 
 module.exports = app;
