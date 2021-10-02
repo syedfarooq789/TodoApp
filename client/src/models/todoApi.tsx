@@ -1,8 +1,9 @@
 import axios from "axios";
 import { todo } from "../interfaces/todo.interface"
+import { todoState } from "../enums/todo.state.enum"
 
 const GET_TODO_URL = "http://localhost:5000/todo/todos";
-const UPDATE_TODO_URL = `http://localhost:5000/api/update/todoItem/`
+const UPDATE_TODO_URL = `http://localhost:5000/todo/`
 
 export const getTodos = async () => {
     try {
@@ -16,7 +17,7 @@ export const getTodos = async () => {
 
 export const updateTodo = async (todo: todo) => {
     try {
-        const item = { ...todo, status: todo.status === "Pending" ? "Done" : "Pending" }
+        const item = { ...todo, status: todo.status === todoState.Pending ? todoState.Done : todoState.Pending }
         const updateTodo = await axios.put(
             UPDATE_TODO_URL + `${todo.id}`,
             item
