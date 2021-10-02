@@ -7,7 +7,7 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("<Snackbar/>", () => {
-    it("handles add button", async () => {
+    it("snackbar", async () => {
         const handleClose = jest.fn();
         const openSnackBar = true;
         const { getByTestId } = render(<Snackbar openSnackBar={openSnackBar} handleClose={handleClose} />);
