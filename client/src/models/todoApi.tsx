@@ -17,7 +17,7 @@ export const getTodos = async () => {
 
 export const updateTodo = async (todo: todo) => {
     try {
-        const item = { ...todo, status: todo.status === todoState.Pending ? todoState.Done : todoState.Pending }
+        const item = { ...todo, status: todo.status === todoState.Pending ? todoState.Done : todoState.Pending };
         const updateTodo = await axios.put(
             UPDATE_TODO_URL + `${todo.id}`,
             item
