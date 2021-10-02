@@ -12,6 +12,8 @@ Object {
           <table
             aria-label="simple table"
             class="MuiTable-root css-quj9j6-MuiTable-root"
+            data-testid="todo-table"
+            id="table"
           >
             <thead
               class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -50,6 +52,8 @@ Object {
         <table
           aria-label="simple table"
           class="MuiTable-root css-quj9j6-MuiTable-root"
+          data-testid="todo-table"
+          id="table"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
