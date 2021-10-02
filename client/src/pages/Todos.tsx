@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import {
     getTodos,
     updateTodo,
@@ -12,8 +12,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { todo } from "../interfaces/todo.interface"
 import { todoState } from "../enums/todo.state.enum"
-import { Button, IconButton, Snackbar, } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close'
+import Snackbar from '../components/Snackbar'
 
 const Todos = () => {
     const [todo, setTodo] = useState<todo[]>([]);
@@ -55,22 +54,6 @@ const Todos = () => {
     const handleClose = () => {
         setOpenSnackBar(false);
     };
-    
-    const action = (
-        <Fragment>
-            <Button color="secondary" size="small" onClick={() => handleClose}>
-                UNDO
-            </Button>
-            <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-            ></IconButton>
-            <CloseIcon fontSize="small" onClick={handleClose} />
-        </Fragment>
-    );
-
-
 
     return (
         <div>
@@ -109,13 +92,7 @@ const Todos = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar
-                open={openSnackBar}
-                autoHideDuration={6000}
-                onClose={handleClose}
-                message="Error from the server"
-                action={action}
-            />
+            <Snackbar openSnackBar={openSnackBar} handleClose={handleClose}></Snackbar>
         </div>
 
     )
