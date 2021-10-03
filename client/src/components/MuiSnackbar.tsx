@@ -3,7 +3,8 @@ import { Snackbar } from '@mui/material';
 import { Button, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'
 import { snackBarProps } from '../interfaces/snackbar.props.interface'
-const Todos = ({ openSnackBar, handleClose }: snackBarProps) => {
+
+const MuiSnackbar = ({ openSnackBar, handleClose }: snackBarProps) => {
 
     const action = (
         <Fragment>
@@ -33,4 +34,4 @@ const Todos = ({ openSnackBar, handleClose }: snackBarProps) => {
     )
 }
 
-export default Todos;
+export default MuiSnackbar;
