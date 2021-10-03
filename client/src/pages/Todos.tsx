@@ -58,7 +58,7 @@ const Todos = () => {
     return (
         <div>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} size="small" aria-label="simple table">
+                <Table sx={{ minWidth: 650 }} size="small" aria-label="simple table" data-testid="todo-table" id="table">
                     <TableHead>
                         <TableRow>
                             <TableCell width="30%">Todos</TableCell>
