@@ -12,7 +12,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { todo } from "../interfaces/todo.interface"
 import { todoState } from "../enums/todo.state.enum"
-import Snackbar from '../components/Snackbar'
+import MuiSnackbar from '../components/MuiSnackbar'
 
 const Todos = () => {
     const [todo, setTodo] = useState<todo[]>([]);
@@ -92,7 +92,7 @@ const Todos = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar openSnackBar={openSnackBar} handleClose={handleClose}></Snackbar>
+            <MuiSnackbar openSnackBar={openSnackBar} handleClose={handleClose}></MuiSnackbar>
         </div>
 
     )

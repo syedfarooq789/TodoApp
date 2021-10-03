@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/extend-expect"
 import { fireEvent, render } from "@testing-library/react";
 import Enzyme from "enzyme";
-import Snackbar from "./Snackbar";
+import Snackbar from "./MuiSnackbar";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 Enzyme.configure({ adapter: new Adapter() });
