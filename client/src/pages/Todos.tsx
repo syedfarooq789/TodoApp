@@ -22,16 +22,14 @@ const Todos = () => {
     }, []);
 
     async function getTodoList() {
-        (async () => {
-            try {
-                const todos = await getTodos() as todo[];
-                if (todos.length != 0)
-                    setTodo(todos);
-            } catch (err) {
-                console.log("get todos error in todos.tsx" + err);
-                setOpenSnackBar(true);
-            }
-        })();
+        try {
+            const todos = await getTodos() as todo[];
+            if (todos.length != 0)
+                setTodo(todos);
+        } catch (err) {
+            console.log("get todos error in todos.tsx" + err);
+            setOpenSnackBar(true);
+        }
     }
 
     const handleStatusChange = async (todoItem: todo) => {
