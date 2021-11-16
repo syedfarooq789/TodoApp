@@ -11,7 +11,7 @@
 tests is written for server using jest and supertest whereas tests is written for client using jest, enzyme and react testing library
 
 # How to run the app locally:
-To run the application write "npm run start-application" it will start both server and client concurrently
+First got inside client folder and create .env file. Add SKIP_PREFLIGHT_CHECK=true inside file. To run the application write "npm run start-application" it will start both server and client concurrently
 
 
 # How to run the tests:
