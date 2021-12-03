@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const TodoController = require('./todo.controller');
+const TodoController = require("./todo.controller");
 
 /* GET all todos. */
-router.get('/todos', TodoController.getTodos);
+router.get("/todos", TodoController.getTodos);
 /* Update a todo. */
-router.put('/:todoId', TodoController.updateTodo);
+router.put("/:todoId", TodoController.updateTodo);
 
 module.exports = router;
