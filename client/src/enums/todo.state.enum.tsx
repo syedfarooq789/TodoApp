@@ -1,4 +1,4 @@
 export enum todoState {
-    Pending = "Pending",
-    Done = "Done"
+  Pending = "Pending",
+  Done = "Done",
 }
